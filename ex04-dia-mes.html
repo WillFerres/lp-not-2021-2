@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+    <script>
+        /*
+            Solicite ao usuário que informe o número correspondente a um
+            mês, na faixa entre 1 e 12.
+            Usando a estrutura switch..case, informe de volta ao usuário quantos
+            dias possui o mês informado, conforme segue:
+            * JANEIRO, MARÇO, MAIO, JULHO, AGOSTO, OUTUBRO e DEZEMBRO: 31 dias
+            * ABRIL, JUNHO, SETEMBRO e NOVEMBRO: 30 dias
+            * FEVEREIRO: 28 ou 29 dias (em anos bissextos)
+        */
+        let mes = parCint(prompt("informe o mês: "))
+        let resultado 
+
+        if (isNaN)(mes) 
+        {
+            alert("ERRO. Mês informado nao correponde ao valor correto !")
+        }
+        switch(mes) 
+        {
+            case "1" :
+                resultado = " O mes de Janeiro possue 31 dias! "
+                 break 
+            
+            case "3" :
+                resultado = " O mes de Março possue 31 dias! "
+                 break 
+                 
+            case "5" :
+                resultado = " O mes de Maio possue 31 dias! "
+                 break      
+                 
+            case "7" :
+                resultado = " O mes de Julho possue 31 dias! "
+                 break      
+                 
+            case "8" :
+                resultado = " O mes de Agosto possue 31 dias! "
+                 break 
+
+            case "10" :
+                resultado = " O mes de Outubro possue 31 dias! "
+                 break 
+                 
+            case "12" :
+                resultado = " O mes de Dezembro possue 31 dias! "
+                 break 
+                        
+                 // MESES COM 31 DIAS                  
+                 // --------------------------------------------------------------
+            
+            case "4" :
+                resultado = " O mes de Abril possue 31 dias! "
+                 break      
+                 
+            case "6" :
+                resultado = " O mes de Junho possue 31 dias! "
+                 break  
+                 
+            case "9" :
+                resultado = " O mes de Setembro possue 31 dias! "
+                 break 
+
+                 // MESES COM 30 DIAS 
+                 //---------------------------------------------------------------
+                 case " Fevereiro" :
+                resultado = "Estes meses possuem entre 28 ou 29 dias caso seja bissexto !"    
+               break
+        }
+        if ( resultado ==! undefined) 
+        {
+            documento.write(`${mes} ${resultado}`)
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
