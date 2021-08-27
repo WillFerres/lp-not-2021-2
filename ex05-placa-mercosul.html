@@ -31,16 +31,14 @@
             Em seguida, usando a estrutura de decisão switch..case, informe ao usuário 
             a letra correspondente ao dígito informado.
         */
-       let num , resultado 
+       let num, resultado 
        
        do              
         {
-            num = parseInt(prompt("Informe o numero: "))
+            num = parseInt(prompt("Informe o número: "))
             
-        }while(isNaN(num) || num < 10 || num > 0 )
-        alert("ERRO: numero digitado é invalido.")
-
-
+        }while(isNaN(num) || num > 9 || num < 0 )
+        
        
        switch(num)
            {
@@ -78,7 +76,7 @@
             alert("ERRO: valor invalido!")
            
        }
-            
+       document.write(`${num} é igual a ${resultado}`)
        
 
     </script>
