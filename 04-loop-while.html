@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Loop </title>
+    <script>
+       
+       let soma = 0, num
+
+        while(num !== 0 ) 
+        {
+          num = Number(prompt("Informe um número para somar: "))
+        // só somamos se o usuário tiver informado um numero valido
+        if(! isNaN(num)) // se o valor não for NaN
+        {
+        soma += num // soma = soma + num
+        }
+        }
+        alert(`A soma dos números informados é ${soma}".`)
+
+        // Caracteristicas do loop while :
+        // 1 ) quantidade de execuções : independente
+        // 2) Garantia de execução: 0
+        // 3) Local da avaliação da condição : no inicio.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
