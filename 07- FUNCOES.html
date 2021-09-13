@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang=pt-brn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <script>
+        
+        let num, fatorial
+
+        // Calculando fatorial de 5
+        fatorial = 1 
+        for(let i = num; i > 1; i --)
+        {
+            fatorial *= 1
+        }
+        document.write(`${num} é igual a ${fatorial}. <br>`)
+
+
+
+        /*******************************************************/
+        num = 8
+        fatorial = 1
+        for(let i = num; i > 1; i--)
+        {
+            fatorial *= 1
+        }
+        document.write(`${num} é igual a ${fatorial}. <br>`)
+
+        /***********************************************************************
+         Principio DRY = Don't repeat yourself ( não se repita)
+        */
+
+        // DECLARAÇAO DE FUNÇAO
+        // calcFatorial => nome da função ( sem acentos, sem espaços, sempre começar com letra minusculas.)
+        // num -> parâmetro ou argumento ( dado de entrada)
+        function calcFatorial(num)
+        {  // uma variavel declarada dentro da função so existe dentro da função
+            let resultado = 1
+            for(let i = num; i > 1; i--)
+            {
+                resultado *= 1
+            }
+            return resultado      // Dado de saida
+        }
+        // Chamada a função
+        // A variavel fat4 receberá o resutlado da função enviado pelo return
+        let fat4 = calcfatorial(4)
+
+        document.write(` 4! é igual a ${fat4}.<br>`)
+
+        // Chamada à função sem atribuir a variavel ( direto )
+        document.write(`6! é igual a ${calcFatorial(6)}. <br>`)
+
+        // chamada a uma função da biblioteca Math do Js
+        document.write(`A raiz quadrada de 3 é ${Math.sqrt(3)}.<br>`)
+
+        let int
+        do {
+            int = parseInt(prompt('Informe um número inteiro maior que 1 : '))
+        }while(isNaN(int) || int <= 1)
+        
+        document.write(`${int} é igual a ${calcFatorial(int)}. <br>`)
+
+
+    </script>
+</body>
+</html>
