@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções 3</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        FUNÇÕES SER RETORNO
+        São funções que desempenham uma terefa, mas não retornam um valor como resultado
+        */
+
+        //DECLARAÇÃO DE FUNÇAO
+       function desenharTraco(tamanho)
+       {
+           for(let i = 1; i <= tamanho; i++)
+           {
+               document.write('-')
+           }
+           document.write("<br>")
+       }
+       // CHAMADAS DE FUNÇÃO
+       // A variaveis, umas vez que a função não retorna valor (return).
+       desenharTraco(50)
+       desenharTraco(30)
+       desenharTraco(75)
+
+       /*
+       FUNÇÃO SEM PARAMENTRO
+       Uma função sem paramentro nao precisa de informação externa para fazer seu trablho.
+       Neste caso, os parenteses que seeguem o nome da função permanecem, tanto na declaração quanto na chamada da função.
+       */
+       function agora()    // Retorna a hora atual do computador
+       {
+           let hoje = new Date()
+           return hoje.getHours() + ":" + hoje.getMinutes() + ":" + hoje.getSecods()
+       }
+       document.write(`Hora atual ${agora()}<br>`)
+
+
+       // FUNÇAO SEM PARAMETRO E SEM RETORNO
+
+       function saudade()
+       {
+           let hoje = new Date()
+           let hora = hoje.getHours()
+
+           if (hora < 12)
+           {
+               document.write("Bom dia ! <br>")
+           }
+           else if(hora < 18)
+           {
+               document.write("Boa Tarde! <br>") 
+           }
+           else
+           {
+               document.write("Boa noite!<br>")
+           }
+
+       }
+       saudades() // chamada a função
+
+       /*
+        FUNÇÃO COM OARAMETRO(S) OPCIONAL(s)
+        O(s) ultimo(s) paramentro(s) de uma função podem se tornar
+        opcionais caso seja fornecido um valor que será usado como padrão para o caso de ele(s) 
+        não ser(em) passado(s)
+
+        */
+        function calcArea(base, altura , tipo ){
+            let area 
+            switch(tipo){
+                case "R" :              // retangulo
+                    area = base * altura
+                    break    
+                case "T"    :          // triangulo
+                    area = base * altura
+                    break
+                case "E":              // elipse
+                    area = (base /2) * ( altura/2) * Math.PI
+                    break
+
+                default:                // Forma nao reconhecida
+                    area = null
+                    
+                }
+                return area 
+            }
+            document.write(`Area de um retangulo de 10x12: ${calcArea(10, 12)}<br>`)
+            document.write(`Area de um retangulo de 10x12: ${calcArea(7, 6)}<br>`)
+            document.write(`Area de um retangulo de 10x12: ${calcArea(4.5, 4.5)}<br>`)
+            document.write(`Area de um retangulo de 10x12: ${calcArea(19, 12.5)}<br>`)
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 18</title>
+</head>
+<body>
+    <script>
+
+        /*            Escreva uma função que receba dois números e retorne o maior entre eles.            Retorne undefined caso os números sejam iguais entre si.*/
+
+        function calcMaior(num1, num2)
+        
+       /* {
+            let maior
+            if( num1 > num2) 
+            {
+                maior = num1
+            }
+
+                       
+            else if (num2 > num1)
+            {
+                maior = num2
+            }
+            else 
+            {
+                maior = undefined   // números são iguais entre si
+            }
+            
+        }
+        return maior
+        */ //UMA DAS FORMAS
+
+         function Maior(num1, num2)
+        
+        {
+            let maior
+            if( num1 > num2) 
+            {
+               return num1
+            }
+
+                       
+            else if (num2 > num1)
+            {
+                return num1
+            }
+            else 
+            {
+                return undefined   // números são iguais entre si
+            }
+            
+        }
+
+        document.write(`O maior numero entre 8 e 11 ${Maior(8, 11)}. <br>`)
+       
+        document.write(`O maior numero entre 6 e 2 ${Maior(6, 2)}. <br>`)
+        
+        document.write(`O maior numero entre 7 e 7 ${Maior(7, 7)}. <br>`) 
+
+    </script>
+</body>
+</html>
