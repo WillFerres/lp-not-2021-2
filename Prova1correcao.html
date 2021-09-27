@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 1 Correção</title>
+</head>
+<body>
+    <script>
+
+        let dia, mes , ano 
+                    // validação do dia mes e ano
+
+        do{             // Dia do nascimento
+            dia = parseInt(propt("Informe o dia do seu nascimento (1-31): <br>"))
+        }while(isNaN(dia) || dia < 1 || dia > 31 )
+
+        do{             // Mes do nascimento
+            mes = parseInt(propt("Informe o mes do seu nascimento (1-12): <br>"))
+        }while(isNaN(mes) || mes < 1 || mes > 12 )
+
+        do{             // Ano do nascimento
+            ano = parseInt(propt("Informe o ano do seu nascimento (1921-2021): <br>"))
+        }while(isNaN(ano) || ano < 1921 || ano > 2021 )
+
+
+                        // Validação da função para determinar a casa
+
+        function casa( dia, mes, ano)
+        {
+            let soma = (dia + mes) * 4
+            return soma % 4 
+
+        }
+
+
+                    // validação do Switch case com o chamado da função
+        let numCasa = determinarCasa(dia, mes, ano)  // ou poderia fazer a chamada direto no switch(determinarCasa(dia, mes, ano))
+        
+        switch(numCasa)
+        {
+            case 0:
+            document.write("Casa Gado Demais ")
+                break
+            case 1:
+                document.write("Casa Galo de Rinha")
+                break
+            case 2:
+                document.write("Casa Lacreste")
+                break
+            case 3:
+                document.write("Casa Smilinguido")
+                break
+        }
+                
+        
+
+    </script>
+
+
+
+</body>
+</html>
